@@ -59,10 +59,14 @@ SELECT
 FROM
 	`napfogyatkozas`
 WHERE
-	LOWER(`megfigyelheto`) LIKE '%észak%'
-	OR LOWER(`megfigyelheto`) LIKE '%dél%'
-	OR LOWER(`megfigyelheto`) LIKE '%kelet%'
-	OR LOWER(`megfigyelheto`) LIKE '%nyugat%';
+	LOWER(`megfigyelheto`)
+	LIKE '%észak%'
+	OR LOWER(`megfigyelheto`)
+	LIKE '%dél%'
+	OR LOWER(`megfigyelheto`)
+	LIKE '%kelet%'
+	OR LOWER(`megfigyelheto`)
+	LIKE '%nyugat%';
 
 -- 10. feladat
 SELECT
