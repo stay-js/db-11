@@ -6,7 +6,10 @@ FROM
 
 -- 4. feladat
 SELECT
-	`gyartmany`, `tipus`, `vegsebesseg`, `gyorsulas`
+	`gyartmany`,
+	`tipus`,
+	`vegsebesseg`,
+	`gyorsulas`
 FROM
 	`autoskartya`
 WHERE (`vegsebesseg` >= 220
@@ -49,8 +52,8 @@ WHERE
 	AND `kilowatt` >= 150;
 
 -- 8. feladat
-SELECT
-	DISTINCT(`gyartmany`)
+SELECT DISTINCT
+	`gyartmany`
 FROM
 	`autoskartya`
 ORDER BY
