@@ -118,7 +118,7 @@ SELECT
 FROM
 	`korok`
 WHERE
-`szin` = 'lila';
+	`szin` = 'lila';
 
 -- 18. feladat
 SELECT
@@ -128,7 +128,6 @@ FROM
 	`korok`
 WHERE
 	`szin` IN('piros', 'kek');
-
 
 -- 19. feladat
 SELECT
