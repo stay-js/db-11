@@ -110,7 +110,7 @@ ORDER BY
 SELECT
 	`nev`,
 	`kategoria`,
-	SUM(`mennyiseg` * `egysegar`) as `koltes`
+	SUM(`mennyiseg` * `egysegar`) AS `koltes`
 FROM
 	`kiadasok`
 GROUP BY
