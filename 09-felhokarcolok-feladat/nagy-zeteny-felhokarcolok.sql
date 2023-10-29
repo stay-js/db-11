@@ -92,7 +92,8 @@ FROM
 
 -- 14. feladat
 SELECT
-	MIN(`befejezes_eve`) AS `elso`, MAX(`befejezes_eve`) AS `utolso`
+	MIN(`befejezes_eve`) AS `elso`,
+	MAX(`befejezes_eve`) AS `utolso`
 FROM
 	`felhokarcolok`;
 
