@@ -127,4 +127,3 @@ FROM
 WHERE
 	`nev` IS NULL
 	AND `visszahozta` IS NULL;
-
