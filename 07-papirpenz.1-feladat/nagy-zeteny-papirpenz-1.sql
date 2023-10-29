@@ -28,7 +28,7 @@ FROM
 
 -- 7. feladat
 SELECT
-	COUNT(*) as `Sorok száma`
+	COUNT(*) AS `Sorok száma`
 FROM
 	`papirpenz`;
 
@@ -88,7 +88,6 @@ FROM
 	`papirpenz`
 WHERE
 	`penznem` = 'RON';
-
 
 -- 15. feladat
 SELECT
