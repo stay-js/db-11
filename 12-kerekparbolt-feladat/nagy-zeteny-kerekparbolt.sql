@@ -1,172 +1,171 @@
 -- 3. feladat
 SELECT
-    *
+	*
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `nem` = 'női'
+	`nem` = 'női'
 ORDER BY
-    `ar` DESC;
+	`ar` DESC;
 
 -- 4. feladat
 SELECT
-    `nev`,
-    `szin`
+	`nev`,
+	`szin`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `szin` LIKE '%kék%'
+	`szin` LIKE '%kék%'
 ORDER BY
-    `nev` ASC;
+	`nev` ASC;
 
 -- 5. feladat
 SELECT
-    *
+	*
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `nev` LIKE '____MTB%';
+	`nev` LIKE '____MTB%';
 
 -- 6. feladat
 SELECT
-    COUNT(*) AS `sorok_szama`
+	COUNT(*) AS `sorok_szama`
 FROM
-    `kerekparok`;
+	`kerekparok`;
 
 -- 7. feladat
 SELECT
-    COUNT(DISTINCT `gyarto`) AS `gyartok_szama`
+	COUNT(DISTINCT `gyarto`) AS `gyartok_szama`
 FROM
-    `kerekparok`;
+	`kerekparok`;
 
 -- 8. feladat
 SELECT
-    COUNT(*) AS `rockrider_db`
+	COUNT(*) AS `rockrider_db`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `gyarto` = 'Rockrider';
+	`gyarto` = 'Rockrider';
 
 -- 9. feladat
 SELECT
-    SUM(`keszlet`) AS `teljes_keszlet`
+	SUM(`keszlet`) AS `teljes_keszlet`
 FROM
-    `kerekparok`;
+	`kerekparok`;
 
 -- 10. feladat
 SELECT
-    SUM(`keszlet` * `ar`) AS `teljes_ertek`
+	SUM(`keszlet` * `ar`) AS `teljes_ertek`
 FROM
-    `kerekparok`;
+	`kerekparok`;
 
 -- 11. feladat
 SELECT
-    MAX(`sebesseg`) AS `legnagyobb_sebesseg`
+	MAX(`sebesseg`) AS `legnagyobb_sebesseg`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `ar` BETWEEN 90000 AND 150000;
+	`ar` BETWEEN 90000 AND 150000;
 
 -- 12. feladat
 SELECT
-    `nev`,
-    `gyarto`,
-    CONCAT(`ar`, ' Ft') AS `ar_forintban`
+	`nev`,
+	`gyarto`,
+	CONCAT(`ar`, ' Ft') AS `ar_forintban`
 FROM
-    `kerekparok`
+	`kerekparok`
 ORDER BY
-    `ar` DESC
+	`ar` DESC
 LIMIT 5;
 
 -- 13. feladat
 SELECT
-    `nev`,
-    `sebesseg`,
-    `meret`,
-    `ar`
+	`nev`,
+	`sebesseg`,
+	`meret`,
+	`ar`
 FROM
-    `kerekparok`
-WHERE
-    (
-        (`nem` = 'férfi' AND `tipus` = 'városi') OR(
-            `nem` = 'női' AND `tipus` = 'országúti'
-        )
-    ) AND `meret` IN('S', 'M', '54');
+	`kerekparok`
+WHERE ((`nem` = 'férfi'
+		AND `tipus` = 'városi')
+	OR(`nem` = 'női'
+		AND `tipus` = 'országúti'))
+AND `meret` IN('S', 'M', '54');
 
 -- 14. feladat
 SELECT
-    MIN(`keszlet`) AS `minimum_keszlet`
+	MIN(`keszlet`) AS `minimum_keszlet`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `keszlet` <> 0;
+	`keszlet` <> 0;
 
 -- 15. feladat
 SELECT
-    MIN(`kerek_meret`) AS `minimum`,
-    MAX(`kerek_meret`) AS `maximum`,
-    ROUND(AVG(`kerek_meret`), 1) AS `atlag`
+	MIN(`kerek_meret`) AS `minimum`,
+	MAX(`kerek_meret`) AS `maximum`,
+	ROUND(AVG(`kerek_meret`), 1) AS `atlag`
 FROM
-    `kerekparok`;
+	`kerekparok`;
 
 -- 16. feladat
 SELECT
-    `nem`,
-    ROUND(AVG(`ar`)) AS `atlag_ar`
+	`nem`,
+	ROUND(AVG(`ar`)) AS `atlag_ar`
 FROM
-    `kerekparok`
+	`kerekparok`
 GROUP BY
-    `nem`
+	`nem`
 ORDER BY
-    `atlag_ar` DESC;
+	`atlag_ar` DESC;
 
 -- 17. feladat
 SELECT
-    `gyarto`,
-    CONCAT(ROUND(MIN(`ar`) / 420), ' EUR') AS `ar_euroban`
+	`gyarto`,
+	CONCAT(ROUND(MIN(`ar`) / 420), ' EUR') AS `ar_euroban`
 FROM
-    `kerekparok`
+	`kerekparok`
 GROUP BY
-    `gyarto`
+	`gyarto`
 ORDER BY
-    ROUND(MIN(`ar`) / 420) ASC;
+	ROUND(MIN(`ar`) / 420) ASC;
 
 -- 18. feladat
 SELECT
-    `tipus`,
-    ROUND(AVG(`ar`), 2) AS `atlag_ar`
+	`tipus`,
+	ROUND(AVG(`ar`), 2) AS `atlag_ar`
 FROM
-    `kerekparok`
+	`kerekparok`
 GROUP BY
-    `tipus`
+	`tipus`
 ORDER BY
-    `tipus` ASC;
+	`tipus` ASC;
 
 -- 19. feladat
 SELECT
-    `nem`,
-    `tipus`,
-    SUM(`keszlet`) AS `db`
+	`nem`,
+	`tipus`,
+	SUM(`keszlet`) AS `db`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `ar` < 500000
+	`ar` < 500000
 GROUP BY
-    `nem`,
-    `tipus`
+	`nem`,
+	`tipus`
 ORDER BY
-    `nem` DESC,
-    `tipus` ASC,
-    `db` ASC;
- 
+	`nem` DESC,
+	`tipus` ASC,
+	`db` ASC;
+
 -- 20. feladat
 SELECT
-    `gyarto`
+	`gyarto`
 FROM
-    `kerekparok`
+	`kerekparok`
 WHERE
-    `tipus` = 'városi'
+	`tipus` = 'városi'
 GROUP BY
-    `gyarto`
+	`gyarto`
 HAVING
-    COUNT(*) >= 5;
+	COUNT(*) >= 5;
