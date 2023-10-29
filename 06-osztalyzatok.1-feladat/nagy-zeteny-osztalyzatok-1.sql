@@ -38,7 +38,7 @@ WHERE
 
 -- 7. feladat
 SELECT
-	COUNT(*) as `db`
+	COUNT(*) AS `db`
 FROM
 	`jegyek`
 WHERE
@@ -46,7 +46,7 @@ WHERE
 
 -- 8. feladat
 SELECT
-	COUNT(*) as `db`
+	COUNT(*) AS `db`
 FROM
 	`jegyek`
 WHERE
