@@ -29,7 +29,6 @@ WHERE
 
 -- 6. feladat
 SELECT
-	`nev`,
 	((`matematika` + `angol` + `prog_elm` + `prog_gyak` + `tortenelem` + `fizika`) / 6) AS `atlag`
 FROM
 	`jegyek`
@@ -54,13 +53,13 @@ WHERE
 
 -- 9. feladat
 SELECT
-	AVG(`matematika`) AS `Matematika atlag`
+	ROUND(AVG(`matematika`), 2) AS `Matematika atlag`
 FROM
 	`jegyek`;
 
 -- 10. feladat
 SELECT
-	AVG(((`matematika` + `angol` + `prog_elm` + `prog_gyak` + `tortenelem` + `fizika`) / 6)) AS `atlagos teljesitmeny`
+	AVG(((`matematika` + `angol` + `prog_elm` + `prog_gyak` + `tortenelem` + `fizika`) / 6)) AS `átlagos teljesítmény`
 FROM
 	`jegyek`
 WHERE
@@ -82,5 +81,5 @@ SELECT
 FROM
 	`jegyek`
 ORDER BY
-	`matematika`
+	`matematika` DESC
 LIMIT 3;
