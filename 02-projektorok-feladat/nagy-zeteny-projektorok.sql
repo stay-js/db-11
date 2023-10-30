@@ -85,7 +85,7 @@ ORDER BY
 -- 12. feladat
 SELECT
 	`nev`,
-	IFNULL(`terem`, 'ismeretlen')
+	IFNULL(`terem`, 'ismeretlen') AS `terem`
 FROM
 	`projektorok`
 WHERE
