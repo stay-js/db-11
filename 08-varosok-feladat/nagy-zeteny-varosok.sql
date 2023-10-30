@@ -167,13 +167,13 @@ ORDER BY
 -- 23. feladat
 SELECT
 	`jaras`,
-	ROUND(AVG(`terulet`)) AS `atlag__terulet`
+	ROUND(AVG(`terulet`), 2) AS `atlag_terulet`
 FROM
 	`magyarorszag`
 GROUP BY
 	`jaras`
 ORDER BY
-	`atlag__terulet` ASC;
+	`atlag_terulet` ASC;
 
 -- 24. feladat
 SELECT
