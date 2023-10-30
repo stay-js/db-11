@@ -82,7 +82,8 @@ FROM
 	`felhokarcolok`
 WHERE
 	`anyag` IN('acél', 'kompozit')
-	AND `orszagkod` IN('CN', 'RU', 'MY');
+	AND `orszagkod` IN('CN', 'RU', 'MY')
+	AND `befejezes_eve` BETWEEN 1990 AND 2000;
 
 -- 13. feladat
 SELECT
