@@ -122,12 +122,13 @@ WHERE
 
 -- 18. feladat
 SELECT
+	`szin`,
 	`r`,
 	2 * `r` AS `d`
 FROM
 	`korok`
 WHERE
-	`szin` IN('piros', 'kek');
+	`szin` IN('piros', 'kék');
 
 -- 19. feladat
 SELECT
@@ -136,4 +137,4 @@ SELECT
 FROM
 	`korok`
 WHERE
-	`szin` IN('piros', 'kek', 'sarga');
+	`szin` IN('piros', 'kék', 'sárga');
