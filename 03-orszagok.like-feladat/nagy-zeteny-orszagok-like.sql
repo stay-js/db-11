@@ -18,7 +18,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE '%d';
+	`orszag` LIKE '%D';
 
 -- 6. feladat
 SELECT
@@ -26,7 +26,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE 'v%';
+	`orszag` LIKE 'V%';
 
 -- 7. feladat
 SELECT
@@ -34,7 +34,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE '%v%'
+	`orszag` LIKE '%V%'
 ORDER BY
 	`orszag` ASC;
 
@@ -44,7 +44,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` NOT LIKE 'z%'
+	`orszag` NOT LIKE 'Z%'
 ORDER BY
 	`orszag` DESC;
 
@@ -54,7 +54,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` NOT LIKE '%o%'
+	`orszag` NOT LIKE '%O%'
 ORDER BY
 	`orszag` ASC;
 
@@ -65,8 +65,8 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE 'v%'
-	AND `autojel` NOT LIKE 'v%';
+	`orszag` LIKE 'V%'
+	AND `autojel` NOT LIKE 'V%';
 
 -- 11. feladat
 SELECT
@@ -75,7 +75,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`foldr_hely` LIKE 'észak-amerika%';
+	`foldr_hely` LIKE 'Észak-Amerika%';
 
 -- 12. feladat
 SELECT
@@ -94,7 +94,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`foldr_hely` LIKE '%európa%'
+	`foldr_hely` LIKE '%Európa%'
 ORDER BY
 	`terulet` DESC
 LIMIT 1;
@@ -106,7 +106,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`foldr_hely` LIKE 'közép-európa%'
+	`foldr_hely` LIKE 'Közép-Európa%'
 ORDER BY
 	`terulet` ASC
 LIMIT 3;
@@ -117,7 +117,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE '%egyesült%';
+	`orszag` LIKE '%EGYESÜLT%';
 
 -- 16. feladat
 SELECT
@@ -142,7 +142,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`orszag` LIKE '%ország%';
+	`orszag` LIKE '%ORSZÁG%';
 
 -- 19. feladat
 SELECT
@@ -162,7 +162,7 @@ SELECT
 FROM
 	`orszagok`
 WHERE
-	`foldr_hely` LIKE '%európa%'
+	`foldr_hely` LIKE '%Európa%'
 ORDER BY
 	`orszag` ASC;
 
@@ -172,7 +172,7 @@ SELECT DISTINCT
 FROM
 	`orszagok`
 WHERE
-	`penzjel` LIKE '%d'
+	`penzjel` LIKE '%D'
 	AND `penznem` NOT LIKE '%dollár%'
 ORDER BY
 	`penznem` ASC;
