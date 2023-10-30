@@ -26,7 +26,7 @@ FROM
 	`autoskartya`
 WHERE
 	`orszag` = 'Németország'
-	AND(`vegsebesseg` >= 240
+	AND(`vegsebesseg` > 240
 		OR `loero` >= 200);
 
 -- 6. feladat
