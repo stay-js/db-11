@@ -7,7 +7,7 @@ FROM
 -- 4. feladat
 SELECT
 	*,
-	`ertek` / 420 AS `Euróban`
+	ROUND(`ertek` / 420, 2) AS `Euróban`
 FROM
 	`papirpenz`
 WHERE
@@ -108,7 +108,7 @@ WHERE
 
 -- 17. feladat
 SELECT
-	MIN(`ertek`) AS `maximum`
+	MAX(`ertek`) AS `maximum`
 FROM
 	`papirpenz`
 WHERE
