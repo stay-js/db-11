@@ -31,7 +31,7 @@ Jelenítse meg a tábla összes adatát!
 SELECT
 	*
 FROM
-	`top-10`;
+	`top-20`;
 ```
 
 ### 2. feladat
@@ -44,7 +44,7 @@ Jelentítse meg, a "Hip-Hop/Rap" műfajú dalok számát! A számított mező ne
 SELECT
 	COUNT(*) AS `db`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`mufaj` = 'Hip-Hop/Rap';
 ```
@@ -60,7 +60,7 @@ SELECT
 	YEAR(`kiadas`) AS `kiadasi_ev`,
 	COUNT(*) AS `db`
 FROM
-	`top-10`
+	`top-20`
 GROUP BY
 	`kiadasi_ev`
 ORDER BY
@@ -77,7 +77,7 @@ Jelenítse meg a 2022 előtt megjelent kislemezeként (single) kiadott dalok tel
 SELECT
 	TIME_FORMAT(SEC_TO_TIME(SUM(TIME_TO_SEC(`hossz`))), '%i:%s') AS `ossz_hossz`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`album` LIKE '%Single%'
 	AND YEAR(`kiadas`) < 2022;
@@ -94,13 +94,13 @@ SELECT
 	`cim`,
 	`hossz`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`mufaj` = (
 		SELECT
 			`mufaj`
 		FROM
-			`top-10`
+			`top-20`
 		GROUP BY
 			`mufaj`
 		ORDER BY
@@ -120,7 +120,7 @@ Jelenítse meg azon dalok minden adatát kiadás szerint rendezve, amelyekben "P
 SELECT
 	*
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`cim` LIKE '%(%Polo G%)%'
 	AND `album` LIKE '%Single%'
@@ -141,7 +141,7 @@ SELECT
 	`hossz`,
 	`mufaj`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`kiadok` NOT IN('Columbia Records, Sony Music Entertainment', 'Sony Music Entertainment, Columbia Records');
 ```
@@ -156,7 +156,7 @@ Jelenítse meg azon albumokat, amelyekből legalább két dal megtalálható az 
 SELECT
 	`album`
 FROM
-	`top-10`
+	`top-20`
 GROUP BY
 	`album`
 HAVING

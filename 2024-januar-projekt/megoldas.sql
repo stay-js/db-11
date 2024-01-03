@@ -2,13 +2,13 @@
 SELECT
 	*
 FROM
-	`top-10`;
+	`top-20`;
 
 -- 2. feladat
 SELECT
 	COUNT(*) AS `db`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`mufaj` = 'Hip-Hop/Rap';
 
@@ -17,7 +17,7 @@ SELECT
 	YEAR(`kiadas`) AS `kiadasi_ev`,
 	COUNT(*) AS `db`
 FROM
-	`top-10`
+	`top-20`
 GROUP BY
 	`kiadasi_ev`
 ORDER BY
@@ -27,7 +27,7 @@ ORDER BY
 SELECT
 	TIME_FORMAT(SEC_TO_TIME(SUM(TIME_TO_SEC(`hossz`))), '%i:%s') AS `ossz_hossz`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`album` LIKE '%Single%'
 	AND YEAR(`kiadas`) < 2022;
@@ -37,13 +37,13 @@ SELECT
 	`cim`,
 	`hossz`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`mufaj` = (
 		SELECT
 			`mufaj`
 		FROM
-			`top-10`
+			`top-20`
 		GROUP BY
 			`mufaj`
 		ORDER BY
@@ -56,7 +56,7 @@ WHERE
 SELECT
 	*
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`cim` LIKE '%(%Polo G%)%'
 	AND `album` LIKE '%Single%'
@@ -70,7 +70,7 @@ SELECT
 	`hossz`,
 	`mufaj`
 FROM
-	`top-10`
+	`top-20`
 WHERE
 	`kiadok` NOT IN('Columbia Records, Sony Music Entertainment', 'Sony Music Entertainment, Columbia Records');
 
@@ -78,7 +78,7 @@ WHERE
 SELECT
 	`album`
 FROM
-	`top-10`
+	`top-20`
 GROUP BY
 	`album`
 HAVING
