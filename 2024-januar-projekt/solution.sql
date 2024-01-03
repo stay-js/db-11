@@ -73,3 +73,13 @@ FROM
 	`top-10`
 WHERE
 	`kiadok` NOT IN('Columbia Records, Sony Music Entertainment', 'Sony Music Entertainment, Columbia Records');
+
+-- 8. feladat
+SELECT
+	`album`
+FROM
+	`top-10`
+GROUP BY
+	`album`
+HAVING
+	COUNT(*) >= 2;

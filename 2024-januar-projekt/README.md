@@ -29,3 +29,7 @@ Jelenítse meg azon dalok minden adatát kiadas szerint rendezve amelyekben Polo
 ### 7. feladat
 
 Jelenítse meg azon dalok címét, albumát, hosszát és műfaját, amelyek kiadásáért nem csak a Columbia Records és a Sony Music Entertainment felelős!
+
+### 8. feladat
+
+Jelenítse meg azon albumokat, amelyekből legalább két dal megtalálható az adatbázisban.
