@@ -10,13 +10,13 @@ DROP TABLE IF EXISTS `top-20`;
 
 CREATE TABLE `top-20` (
   `id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `cim` varchar(255),
-  `album` varchar(255),
+  `cim` varchar(50),
+  `album` varchar(40),
   `hossz` time,
   `kiadas` date,
-  `kiadok` varchar(255),
-  `mufaj` varchar(255),
-  `szovegirok` varchar(255)
+  `kiadok` varchar(80),
+  `mufaj` varchar(20),
+  `szovegirok` varchar(150)
 );
 
 INSERT INTO `top-20` (`id`, `cim`, `album`, `hossz`, `kiadas`, `kiadok`, `mufaj`, `szovegirok`) VALUES

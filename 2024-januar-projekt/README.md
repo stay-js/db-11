@@ -11,13 +11,13 @@ Az elsődleges kulcs **[PK]**-val lett jelölve.
 | Oszlop     | Típus       | Leírás                                                                      |
 | ---------- | ----------- | --------------------------------------------------------------------------- |
 | id         | Egész       | Azonosító. [PK]                                                             |
-| cim        | Szöveg(255) | A dal címe.                                                                 |
-| album      | Szöveg(255) | A dalt tartalmazó album megnevezése.                                        |
+| cim        | Szöveg(50)  | A dal címe.                                                                 |
+| album      | Szöveg(40)  | A dalt tartalmazó album megnevezése.                                        |
 | hossz      | Idő         | A dal hossza.                                                               |
 | kiadas     | Dátum       | A dal kiadásának időpontja.                                                 |
-| kiadok     | Szöveg(255) | A dal kiadásában közreműködők listája (vesszővel és szőközzel elválasztva). |
-| mufaj      | Szöveg(255) | A dal műfaja.                                                               |
-| szovegirok | Szöveg(255) | A dal szövegíróinak listája (vesszővel és szőközzel elválasztva).           |
+| kiadok     | Szöveg(80)  | A dal kiadásában közreműködők listája (vesszővel és szőközzel elválasztva). |
+| mufaj      | Szöveg(20)  | A dal műfaja.                                                               |
+| szovegirok | Szöveg(150) | A dal szövegíróinak listája (vesszővel és szőközzel elválasztva).           |
 
 ## Feladatok
 
