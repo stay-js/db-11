@@ -51,7 +51,7 @@ WHERE
 
 ### 3. feladat
 
-Jelenítse meg kiadási év szerint csoportosítva a dalok számát! A számított mező neve legyen: `db`, illetve a a kiadás évét tartalmazó mező neve legyen: `kiadasi_ev`. Az adatokat kiadási év szerint növekvő sorrendben jelenítse meg!
+Jelenítse meg kiadási év szerint csoportosítva a dalok számát! A számított mező neve legyen: `db`, illetve a a kiadás évét tartalmazó mező neve legyen: `kiadasi_ev`. Az adatokat kiadási év szerint növekvő sorrendben jelenítse meg.
 
 **Megoldás:**
 
@@ -85,7 +85,7 @@ WHERE
 
 ### 5. feladat
 
-Jelenítse meg azon 2 perc 30 másodpercnél hosszabb dalok címét és hosszát, amelyek abba a kategóriába tartoznak amiből a legtöbb található az adatbázisban.
+Jelenítse meg azon 2 perc 30 másodpercnél hosszabb dalok címét és hosszát, amelyek abba a kategóriába tartoznak amiből a legtöbb található az adatbázisban!
 
 **Megoldás:**
 
@@ -148,7 +148,7 @@ WHERE
 
 ### 8. feladat
 
-Jelenítse meg azon albumokat, amelyekből legalább két dal megtalálható az adatbázisban.
+Jelenítse meg azon albumokat, amelyekből legalább két dal megtalálható az adatbázisban!
 
 **Megoldás:**
 
