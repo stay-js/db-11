@@ -14,8 +14,8 @@ DROP TABLE IF EXISTS `regeny`;
 CREATE TABLE `regeny` (
 	`id` int AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	`magyar` varchar(50) NOT NULL,
-    `angol` varchar(50) NOT NULL,
-    `ev` int NOT NULL,
+	`angol` varchar(50) NOT NULL,
+	`ev` int NOT NULL,
 	`ar` int NOT NULL
 );
 
@@ -44,12 +44,12 @@ INSERT INTO `rendeles` (`regenyid`, `datum`, `db`) VALUES
 
 -- 8. feladat
 SELECT
-    `magyar`,
-    `angol`
+	`magyar`,
+	`angol`
 FROM
-    `regeny`
+	`regeny`
 ORDER BY
-    `ar` ASC
+	`ar` ASC
 LIMIT 1;
 
 -- 9. feladat
@@ -72,8 +72,7 @@ WHERE
     FROM
         `regeny`
     WHERE
-        `angol` = 'The Moving Finger'
-);
+        `angol` = 'The Moving Finger');
 
 -- 11. feladat
 ALTER TABLE
@@ -81,14 +80,14 @@ ALTER TABLE
 
 -- 12. feladat
 UPDATE
-    `regeny`
+	`regeny`
 SET
-    `ar` = 4999
+	`ar` = 4999
 WHERE
-    `angol` = 'Death Comes as the End';
+	`angol` = 'Death Comes as the End';
 
 -- 13. feldat
 SELECT
-    CONCAT(SUM(`ar`), ' Ft') AS `ossz`
+	CONCAT(SUM(`ar`), ' Ft') AS `ossz`
 FROM
-    `regeny`;
+	`regeny`;
