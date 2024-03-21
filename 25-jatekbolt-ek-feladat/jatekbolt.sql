@@ -30,11 +30,11 @@ CREATE TABLE `gyarto` (
 DROP TABLE IF EXISTS `gyartja`;
 
 CREATE TABLE `gyartja` (
-	`cikkszam` varchar(20) NOT NULL,
-	`gyarto_id` int NOT NULL,
-	PRIMARY KEY (cikkszam, gyarto_id)
-	-- FOREIGN KEY (cikkszam) REFERENCES jatek (cikkszam),
-	-- FOREIGN KEY (gyarto_id) REFERENCES gyarto (id)
+    `cikkszam` varchar(20) NOT NULL,
+    `gyarto_id` int NOT NULL,
+    PRIMARY KEY (cikkszam, gyarto_id)
+    -- FOREIGN KEY (cikkszam) REFERENCES jatek (cikkszam),
+    -- FOREIGN KEY (gyarto_id) REFERENCES gyarto (id)
 );
 
 DROP TABLE IF EXISTS `kategoria`;

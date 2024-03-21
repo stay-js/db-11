@@ -1,0 +1,18 @@
+1. Tervezze meg az EK modellt.
+2. Alakítsa át relciósmodellbe.
+
+Az ön feladata megtervezni egy állatorvosi rendelő adatbázisát.
+
+A gazdiknak el kell tárolni a nevét, címét és telefonszámát. Továbbá mindenki kap egy egyedi sorszámot.
+
+Egy gazdinak több állata is lehet, ahogy előfordulhat, hogy egy állatnak több gazdija van.
+
+Az állatokról el kell tárolni a születési idejüket, illetve egyes gyógyszerek adagolása miatt szükség lehet a korukra és a súlyukra is. Amennyiben változik a kedvenc súlya, azt mindig frissítik az aktuális értékre. A rendelőben minden állatnak kötelező, hogy legyen beültetett chip benne, ami egyedileg beazonosítja őket.
+
+Az útlevél kiállításához szükséges megadni, hogy mikor és milyen oltásokat kapott az állat, így ezeket az adatokat is kezelje az adatbázis! Minden egyes védőoltás esetén rögzíteni kell annak az egyedi sorozatszámát.
+
+A megoldást egy .zip fájlban kell leadni, ami tartalmazza:
+- dia fájl
+- kiexportált EK modell
+- Relációssémát tartalmazó fájl
+
