@@ -25,8 +25,9 @@ DROP TABLE IF EXISTS `rendeles`;
 CREATE TABLE `rendeles` (
 	`id` int AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	`regenyid` int NOT NULL,
-    `datum` date NOT NULL,
-	`db` int NOT NULL
+	`datum` date NOT NULL,
+	`db` int NOT NULL,
+	FOREIGN KEY (`regenyid`) REFERENCES `regeny` (`id`)
 );
 
 -- 6. feladat
@@ -38,8 +39,8 @@ INSERT INTO `regeny` (`id`, `magyar`, `angol`, `ev`, `ar`) VALUES
 
 -- 7. feladat
 INSERT INTO `rendeles` (`regenyid`, `datum`, `db`) VALUES
-(4, '2023-02-15', 32),
-(1, '2023-02-27', 1);
+((SELECT `id` FROM  `regeny` WHERE `magyar` = 'Zátonyok közt'), '2023-02-15', 32),
+((SELECT `id` FROM `regeny` WHERE  `angol` = 'The Moving Finger'), '2023-02-27', 1);
 
 -- 8. feladat
 SELECT
@@ -53,12 +54,12 @@ LIMIT 1;
 
 -- 9. feladat
 SELECT
-    `magyar`,
-    `angol`,
-    `db`
+	`magyar`,
+	`angol`,
+	`db`
 FROM
-    `regeny`
-INNER JOIN `rendeles` ON `regeny`.`id` = `regenyid`;
+	`regeny`
+	INNER JOIN `rendeles` ON `regeny`.`id` = `regenyid`;
 
 -- 10. feladat
 DELETE
